@@ -113,3 +113,38 @@ const empleado = new Empleado(new DNI(5956347), "Manolo", 28, "Dublin", "Desarro
 
 hablar_con(empleado)
 
+/******************************
+ * Definición de la clase Jefe
+ ******************************/
+
+class Jefe extends (Empleado) {
+  constructor(dni, nombre, edad, ciudad, puesto, antiguedad, salario, estados) {
+    super(dni, nombre, edad, ciudad, puesto, antiguedad, salario, estados)
+  }
+
+  despedir(empleado) {
+    return `${empleado.nombre}, lamentablemente te tengo que informar que estás despedido.`
+  }
+
+  contratar(persona) { 
+    return `${persona.nombre}, ¿cuándo puedes empezar?`
+  }
+}
+
+// testear Jefe
+
+estados = [
+  "¡Pero y esto qué es!",
+  "¡¿Cuántas veces quieres que te lo explique?!",
+  "¡No vuelvas a llegar tarde!",
+  "¿Quién metió estos blobs aquí?"
+]
+
+const jefe = new Jefe(new DNI(4568728), "Linus", 52, "Palo Alto", "Master of the universe", 30, 250000, estados)
+
+hablar_con(jefe)
+
+console.log()
+console.log(jefe.despedir(empleado))
+console.log(jefe.contratar(persona))
+
