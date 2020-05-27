@@ -70,3 +70,46 @@ function hablar_con(una_persona) {
 }
 
 hablar_con(persona)
+
+/**********************************
+ * Definición de la clase Empleado
+ **********************************/
+
+class Empleado extends (Persona) {
+  
+  constructor(dni, nombre, edad, ciudad, puesto, antiguedad, salario, estados) { 
+    
+    super(dni, nombre, edad, ciudad)
+
+    this._puesto = puesto
+    this._antiguedad = antiguedad
+    this._salario = salario
+
+    this._estados = estados
+  }
+
+  set puesto(puesto) { this._puesto = puesto }
+  set antiguedad(antiguedad) { this._antiguedad = antiguedad }
+  set salario(salario) { this._salario = salario }
+
+  get puesto() { return this._puesto }
+  get antiguedad() { return this._antiguedad }
+  get salario() { return this._salario }
+
+  toString() {
+    return super.toString() +
+      `, trabajo de: ${this.puesto} desde hace ${this.antiguedad} años y gano ${this.salario} al año`
+  }
+}
+
+// testear Empleado
+
+estados = [
+  "¡Hostia! ¡No otra vez!",
+  "¡Me c..o en mi p..a madre!",
+  "¡Shhh, silencio que viene el jefe!"
+]
+const empleado = new Empleado(new DNI(5956347), "Manolo", 28, "Dublin", "Desarrollador Web", 10, 35000, estados)
+
+hablar_con(empleado)
+
