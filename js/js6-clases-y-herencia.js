@@ -59,7 +59,7 @@ estados = [
   "silvando.",
   "tarareando"
 ]
-const persona = new Persona(new DNI(4556777), "Joan Manuel", 74, "Barcelona", estados)
+const persona = new Persona(new DNI(45567771), "Joan Manuel", 74, "Barcelona", estados)
 
 function hablar_con(una_persona) {
   console.log("-".repeat(80))
@@ -109,7 +109,7 @@ estados = [
   "¡Me c..o en mi p..a madre!",
   "¡Shhh, silencio que viene el jefe!"
 ]
-const empleado = new Empleado(new DNI(5956347), "Manolo", 28, "Dublin", "Desarrollador Web", 10, 35000, estados)
+const empleado = new Empleado(new DNI(59563471), "Manolo", 28, "Dublin", "Desarrollador Web", 10, 35000, estados)
 
 hablar_con(empleado)
 
@@ -140,7 +140,7 @@ estados = [
   "¿Quién metió estos blobs aquí?"
 ]
 
-const jefe = new Jefe(new DNI(4568728), "Linus", 52, "Palo Alto", "Master of the universe", 30, 250000, estados)
+const jefe = new Jefe(new DNI(45687281), "Linus", 52, "Palo Alto", "Master of the universe", 30, 250000, estados)
 
 hablar_con(jefe)
 
