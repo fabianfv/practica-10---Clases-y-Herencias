@@ -62,11 +62,23 @@ estados = [
 const persona = new Persona(new DNI(45567771), "Joan Manuel", 74, "Barcelona", estados)
 
 function hablar_con(una_persona) {
-  console.log("-".repeat(80))
-  console.log()
-  console.log(`¿Quién eres?: ${una_persona}`)
-  console.log(`¿${una_persona.nombre} qué estás haciendo?: ${una_persona.que_esta_haciendo()}`)
-  console.log()
+  const SEPARADOR = "-".repeat(80)
+  const PREGUNTA1 = `¿Quién eres?: ${una_persona}`
+  const PREGUNTA2 = `¿${una_persona.nombre} qué estás haciendo?: ${una_persona.que_esta_haciendo()}`
+
+  salida_consola(SEPARADOR, PREGUNTA1, PREGUNTA2)
+  salida_DOM(SEPARADOR, PREGUNTA1, PREGUNTA2)
+}
+function salida_consola(SEPARADOR, PREGUNTA1, PREGUNTA2) {
+  console.log(SEPARADOR + "\n")
+  console.log(PREGUNTA1)
+  console.log(PREGUNTA2)
+}
+
+function salida_DOM(SEPARADOR, PREGUNTA1, PREGUNTA2) {
+  document.write(SEPARADOR + "<br>")
+  document.write(PREGUNTA1 + "<br>")
+  document.write(PREGUNTA2 + "<br>")
 }
 
 hablar_con(persona)
